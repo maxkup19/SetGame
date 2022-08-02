@@ -23,6 +23,7 @@ class Game: ObservableObject {
     
     // MARK: - Intent(s)
     
+    
     func resetGame() { game = Game.createGame() }
     
     func replaceMatchedCards() { game.replaceMatchedCards() }
