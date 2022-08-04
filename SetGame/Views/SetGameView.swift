@@ -10,6 +10,7 @@ import SwiftUI
 struct SetGameView: View {
     
     @ObservedObject var game: Game
+    @State var firstDealWasDone: Bool = true
     
     var body: some View {
         VStack {
@@ -44,14 +45,20 @@ struct SetGameView: View {
             Grid(items: game.deck) { card in
                 CardView(card: card)
                     .onTapGesture {
-                        if !card.wasMatched {
-                            game.chooseCard(card)
-                            print(card)
+                        withAnimation(.easeOut(duration: 1.5)) {
+                            if !card.wasMatched {
+                                game.chooseCard(card)
+                                print(card)
+                            }
                         }
                     }
+                    .transition(.offset(getRandomOffscreenOffset()))
             }
             .padding()
-            .onAppear { game.dealCards(initialNumberOfCards) }
+            .onAppear {
+                firstDealWasDone = true
+                game.dealCards(initialNumberOfCards)
+            }
             
             HStack() {
                 Text("Score: \(game.score)")
@@ -70,7 +77,13 @@ struct SetGameView: View {
         }
     }
     
-    let initialNumberOfCards = 12
+    func getRandomOffscreenOffset() -> CGSize {
+        let angle : Double = Double.random(in: 0..<(2 * Double.pi))
+        return CGSize(width: offscreenRadius*cos(angle), height:offscreenRadius*sin(angle))
+    }
+    
+    private let initialNumberOfCards = 12
+    private let offscreenRadius : Double = 1000.0
 }
 
 struct SetGameView_Previews: PreviewProvider {

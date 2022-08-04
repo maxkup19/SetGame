@@ -16,7 +16,11 @@ struct CardView: View {
             cardBody(for: geometry.size)
                 .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
         }
-        .overlay(RoundedRectangle(cornerRadius: 20).stroke())
+        .cardify(isFaceUp: true,
+                 isSelected: card.isSelected,
+                 wasMatched: card.wasMatched,
+                 isMismatched: card.isMismatched,
+                 aspectRatio: cardAspectRatio)
         .padding()
         
     }

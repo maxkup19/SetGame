@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Array where Element: Identifiable {
     func firstIndex(matching: Element) -> Int? {
@@ -32,3 +33,17 @@ extension Array where Element: Identifiable {
     }
 }
 
+
+extension View {
+    func cardify(isFaceUp: Bool,
+                 isSelected: Bool,
+                 wasMatched: Bool,
+                 isMismatched: Bool,
+                 aspectRatio: CGFloat) -> some View {
+        self.modifier(Cardify(isFaceUp: isFaceUp,
+                              isSelected: isSelected,
+                              wasMatched: wasMatched,
+                              isMismatched: isMismatched,
+                              aspectRatio: aspectRatio))
+    }
+}

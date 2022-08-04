@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A635989289C779D00E1B6DE /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A635988289C779D00E1B6DE /* Cardify.swift */; };
 		0AB8F3C32892A9EE0011A408 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8F3C22892A9EE0011A408 /* Diamond.swift */; };
 		0AB8F3C72892AEC80011A408 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8F3C62892AEC80011A408 /* Squiggle.swift */; };
 		0AB8F3C92892BD200011A408 /* Stripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8F3C82892BD200011A408 /* Stripes.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A635988289C779D00E1B6DE /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		0AB8F3C22892A9EE0011A408 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		0AB8F3C62892AEC80011A408 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
 		0AB8F3C82892BD200011A408 /* Stripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripes.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		0AB8F3D4289597CF0011A408 /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				0A635988289C779D00E1B6DE /* Cardify.swift */,
 				0AE5B0432891DD6500C4497B /* SymbolView.swift */,
 				0AB8F3D2289597BA0011A408 /* CardView.swift */,
 			);
@@ -226,6 +229,7 @@
 				0AB8F3CB2892C0840011A408 /* Extensions.swift in Sources */,
 				0AB8F3DA2896AD170011A408 /* GridLayout.swift in Sources */,
 				0AB8F3C32892A9EE0011A408 /* Diamond.swift in Sources */,
+				0A635989289C779D00E1B6DE /* Cardify.swift in Sources */,
 				0AE5B03E2891D62400C4497B /* SetGame.swift in Sources */,
 				0AE5B0282891C3A700C4497B /* SetGameApp.swift in Sources */,
 				0AB8F3D3289597BA0011A408 /* CardView.swift in Sources */,
